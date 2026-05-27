@@ -1,0 +1,49 @@
+---
+import LayoutBase from '@layouts/LayoutBase.astro';
+---
+
+<LayoutBase>
+  <div class="container" style="padding: 3rem 0;">
+    <h1 class="section-title">Cómo funciona la tokenización en RWAuto</h1>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="paso-detalle">
+        <h3>Paso 1 – Regístrate y valida tu identidad</h3>
+        <p>Crea tu cuenta con correo, teléfono y una contraseña segura. Completa el proceso KYC (Know Your Customer) con Persona Identities Inc.: toma foto de tu identificación oficial (INE o pasaporte) y grábate un video corto mostrando tu rostro de frente, izquierda y derecha. La plataforma compara tus datos biométricos y los valida en segundos. Solo necesitas hacerlo una vez.</p>
+      </div>
+      <div class="paso-detalle">
+        <h3>Paso 2 – Registra el NIV de tu vehículo</h3>
+        <p>Ingresa el Número de Identificación Vehicular de 17 dígitos (lo encuentras en el tablero, en la puerta del conductor o en la factura). El sistema consulta a un validador externo oficial. Si el NIV es correcto y no está alterado, se guarda en el NFT. Si el NIV ya existe (porque otro usuario lo tokenizó), el sistema te alertará. En ese caso, contacta a soporte.</p>
+      </div>
+      <div class="paso-detalle">
+        <h3>Paso 3 – Carga fotos y documentos</h3>
+        <p>Sube las imágenes requeridas en formato JPG, con buena iluminación: fotos del vehículo (frontal, trasera, laterales, interiores, tablero, motor) y documentos (foto del NIV, factura, tenencias pagadas, verificación vigente, constancia de infracciones). Los documentos se almacenan en un área privada y cifrada.</p>
+      </div>
+      <div class="paso-detalle">
+        <h3>Paso 4 – Acuña tu NFT</h3>
+        <p>Revisa que todos los datos sean correctos. Realiza el pago único de $100 MXN vía PayPal (tarjeta de crédito/débito) o código de regalo. Al confirmarse el pago, se genera el NFT en la blockchain. Recibirás una dirección pública que puedes verificar en un explorador de bloques.</p>
+      </div>
+      
+      <h2>¿Y después?</h2>
+      <p>Una vez tokenizado, puedes: actualizar el NFT ($50 MXN por evento) cuando cambie el kilometraje o el estado del vehículo, mantenerlo publicado u oculto, y en una futura etapa (si decides vender), usar el NFT como garantía de procedencia. Pero <strong>no estás obligado a vender</strong>. La tokenización es un fin en sí misma.</p>
+      
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" class="btn-primary" style="background-color: var(--azul);">Ver video explicativo</a>
+      </div>
+      <div style="text-align: center; margin-top: 1rem;">
+        <a href="/#formulario-captacion" class="btn-primary">Comenzar tokenización</a>
+      </div>
+    </div>
+  </div>
+</LayoutBase>
+
+<style>
+  .paso-detalle {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gris-claro);
+  }
+  .paso-detalle h3 {
+    color: var(--azul);
+    margin-bottom: 0.5rem;
+  }
+</style>

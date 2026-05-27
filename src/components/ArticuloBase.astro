@@ -1,0 +1,25 @@
+---
+import LayoutBase from '@layouts/LayoutBase.astro';
+export interface Props {
+  title: string;
+  date: string;
+  category: string;
+}
+const { title, date, category } = Astro.props;
+---
+
+<LayoutBase>
+  <div class="container" style="padding: 3rem 0; max-width: 800px; margin: 0 auto;">
+    <p style="color: var(--azul); text-transform: uppercase; font-weight: 600;">{category}</p>
+    <h1 class="section-title" style="text-align: left; margin-bottom: 0.5rem;">{title}</h1>
+    <p style="color: var(--gris-medio); margin-bottom: 2rem;">{date}</p>
+    
+    <div class="articulo-contenido">
+      <slot />
+    </div>
+    
+    <div style="margin-top: 3rem;">
+      <a href="/blog" class="btn-primary" style="background-color: var(--azul);">← Volver al blog</a>
+    </div>
+  </div>
+</LayoutBase>

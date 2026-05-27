@@ -1,0 +1,54 @@
+---
+import { COLORS } from '../config';
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero__content">
+      <h1 class="hero__title">Tokeniza tu vehículo. Crea su identidad digital inmutable.</h1>
+      <p class="hero__subtitle">Protege tu patrimonio con blockchain. Sin vender, sin complicaciones.</p>
+      <a href="#formulario-captacion" class="btn-primary hero__cta">Tokenizar ahora</a>
+    </div>
+    <!-- Ilustración de fondo o lateral (placeholder) -->
+    <div class="hero__image">
+      <div class="hero__placeholder" style="background-color: #e2e8f0; border-radius: 1rem; padding: 2rem; text-align: center; color: #64748b;">
+        <i class="fas fa-car" style="font-size: 4rem;"></i>
+        <p>Ilustración: vehículo con cadena blockchain</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--fondo) 0%, #ffffff 100%);
+  }
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .hero__title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--gris-oscuro);
+  }
+  .hero__subtitle {
+    font-size: 1.25rem;
+    color: var(--gris-medio);
+    margin-bottom: 2rem;
+  }
+  @media (max-width: 768px) {
+    .hero .container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .hero__title {
+      font-size: 2rem;
+    }
+  }
+</style>

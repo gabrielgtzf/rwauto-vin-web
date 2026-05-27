@@ -1,0 +1,232 @@
+/* Reset básico y variables */
+:root {
+  --azul: #2563eb;
+  --naranja: #f97316;
+  --gris-oscuro: #1f2937;
+  --gris-medio: #4b5563;
+  --gris-claro: #9ca3af;
+  --fondo: #f9fafb;
+  --blanco: #ffffff;
+  --sombra: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: var(--gris-oscuro);
+  background-color: var(--fondo);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.header {
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.logo img {
+  display: block;
+}
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: var(--gris-oscuro);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-menu a:hover {
+  color: var(--azul);
+}
+
+/* Botón principal */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--naranja);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #ea580c;
+}
+
+/* Secciones genéricas */
+.section {
+  padding: 4rem 0;
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--gris-oscuro);
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Tarjetas de beneficios y pasos */
+.beneficio-card,
+.paso-card {
+  background: var(--blanco);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--sombra);
+  text-align: center;
+}
+.beneficio-card i,
+.paso-card i {
+  font-size: 2.5rem;
+  color: var(--azul);
+  margin-bottom: 1rem;
+}
+.beneficio-card h3,
+.paso-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Tabla de precios */
+.precios-table {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--blanco);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+.precios-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.precios-table th,
+.precios-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--gris-claro);
+}
+.precios-table th {
+  background-color: var(--azul);
+  color: white;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--gris-oscuro);
+  color: var(--gris-claro);
+  padding: 3rem 0 1.5rem;
+  margin-top: 4rem;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.footer__col h3 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.footer__col ul {
+  list-style: none;
+}
+.footer__col a {
+  color: var(--gris-claro);
+  text-decoration: none;
+  line-height: 1.8;
+}
+.footer__col a:hover {
+  color: var(--naranja);
+}
+.footer__bottom {
+  text-align: center;
+  border-top: 1px solid var(--gris-medio);
+  padding-top: 1.5rem;
+  font-size: 0.875rem;
+}
+
+/* Formulario */
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--gris-claro);
+  border-radius: 0.375rem;
+}
+.checkbox-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 1rem 0;
+}
+.checkbox-group input {
+  width: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header__inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+main {
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 0 1rem;
+  }
+}

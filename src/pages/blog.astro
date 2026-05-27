@@ -1,0 +1,109 @@
+---
+import LayoutBase from '@layouts/LayoutBase.astro';
+const articulos = [
+  {
+    titulo: "¿Qué es un NFT y cómo aplica a mi auto?",
+    fecha: "15 de enero, 2025",
+    categoria: "Tokenización",
+    extracto: "Explicación sencilla de tokens no fungibles y su uso en vehículos.",
+    slug: "que-es-nft-auto"
+  },
+  {
+    titulo: "5 señales de que tu auto puede ser víctima de clonación",
+    fecha: "10 de enero, 2025",
+    categoria: "Seguridad",
+    extracto: "Cómo detectar si alguien duplicó tu NIV y cómo la tokenización te protege.",
+    slug: "senales-clonacion-auto"
+  },
+  {
+    titulo: "Paso a paso: Cómo validar tu identidad en RWAuto",
+    fecha: "5 de enero, 2025",
+    categoria: "Proceso",
+    extracto: "Guía visual del KYC biométrico.",
+    slug: "validar-identidad-rwauto"
+  },
+  {
+    titulo: "Blockchain y CNBV: por qué RWAuto es seguro y regulado",
+    fecha: "1 de enero, 2025",
+    categoria: "Confianza",
+    extracto: "Explicación de la regulación y la tecnología inmutable.",
+    slug: "blockchain-cnbv-seguro"
+  }
+];
+---
+
+<LayoutBase>
+  <div class="container" style="padding: 3rem 0;">
+    <h1 class="section-title">Blog de RWAuto</h1>
+    <p style="text-align: center;">Aprende sobre tokenización, blockchain y protección vehicular.</p>
+    
+    <div class="blog-grid">
+      {articulos.map(art => (
+        <div class="blog-card">
+          <div class="blog-card__image">
+            <div style="background-color: #cbd5e1; height: 160px; display: flex; align-items: center; justify-content: center;">Imagen destacada</div>
+          </div>
+          <div class="blog-card__content">
+            <span class="blog-card__categoria">{art.categoria}</span>
+            <h3>{art.titulo}</h3>
+            <p class="blog-card__fecha">{art.fecha}</p>
+            <p>{art.extracto}</p>
+            <a href={`/blog/${art.slug}`} class="blog-card__link">Leer más →</a>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- Newsletter opcional -->
+    <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--blanco); border-radius: 1rem;">
+      <h3>Recibe nuevos artículos</h3>
+      <p>Suscríbete para no perderte nuestras guías de tokenización.</p>
+      <form data-netlify="true" name="newsletter" method="POST" style="max-width: 400px; margin: 0 auto;">
+        <input type="hidden" name="form-name" value="newsletter" />
+        <div style="display: flex; gap: 0.5rem;">
+          <input type="email" name="email" placeholder="Tu correo electrónico" required style="flex: 1;" />
+          <button type="submit" class="btn-primary">Suscribirme</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</LayoutBase>
+
+<style>
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .blog-card {
+    background: var(--blanco);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+  }
+  .blog-card__content {
+    padding: 1rem;
+  }
+  .blog-card__categoria {
+    font-size: 0.75rem;
+    color: var(--azul);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .blog-card h3 {
+    margin: 0.5rem 0;
+  }
+  .blog-card__fecha {
+    font-size: 0.75rem;
+    color: var(--gris-medio);
+    margin-bottom: 0.5rem;
+  }
+  .blog-card__link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--naranja);
+    text-decoration: none;
+    font-weight: 500;
+  }
+</style>

@@ -1,0 +1,51 @@
+---
+const columns = [
+  {
+    title: 'RWAuto',
+    links: [
+      { name: '¿Qué es tokenización?', href: '/que-es-tokenizacion' },
+      { name: 'Beneficios', href: '/beneficios' },
+      { name: 'Cómo funciona', href: '/como-funciona' }
+    ]
+  },
+  {
+    title: 'Recursos',
+    links: [
+      { name: 'Precios', href: '/precios' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'FAQ', href: '/faq' }
+    ]
+  },
+  {
+    title: 'Legales',
+    links: [
+      { name: 'Aviso de privacidad', href: '/aviso-privacidad' },
+      { name: 'Términos y condiciones', href: '/terminos' }
+    ]
+  }
+];
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      {columns.map(col => (
+        <div class="footer__col">
+          <h3>{col.title}</h3>
+          <ul>
+            {col.links.map(link => (
+              <li><a href={link.href}>{link.name}</a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+      <div class="footer__col">
+        <h3>Contacto</h3>
+        <p><a href="mailto:soporte@rwauto.vin">soporte@rwauto.vin</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; {new Date().getFullYear()} RWAuto. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>

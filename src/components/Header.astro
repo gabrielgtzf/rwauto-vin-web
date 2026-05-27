@@ -1,0 +1,26 @@
+---
+const menuItems = [
+  { name: '¿Qué es?', href: '/que-es-tokenizacion' },
+  { name: 'Beneficios', href: '/beneficios' },
+  { name: 'Cómo funciona', href: '/como-funciona' },
+  { name: 'Precios', href: '/precios' },
+  { name: 'FAQ', href: '/faq' },
+  { name: 'Contacto', href: '/contacto' }
+];
+---
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="/" class="logo">
+      <img src="/logo-rwauto.png" alt="RWAuto" width="180" height="auto" />
+    </a>
+    <nav>
+      <ul class="nav-menu">
+        {menuItems.map(item => (
+          <li><a href={item.href}>{item.name}</a></li>
+        ))}
+      </ul>
+    </nav>
+    <!-- Botón mobile (hamburguesa) – opcional, su equipo puede añadirlo después -->
+  </div>
+</header>

@@ -1,0 +1,76 @@
+<!-- Acordeón simple con JavaScript vanilla. El estado se maneja con un script. -->
+<div class="faq-accordion">
+    <div class="faq-item">
+      <button class="faq-question">¿Necesito conocimientos de blockchain para tokenizar?</button>
+      <div class="faq-answer">No. RWAuto maneja toda la tecnología por ti. Solo necesitas saber usar un navegador web, cargar fotos y hacer un pago con tarjeta o PayPal.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">¿Qué pasa si vendo mi auto por fuera de RWAuto?</button>
+      <div class="faq-answer">Debes eliminar el NFT desde tu cuenta. Si no lo haces, el nuevo propietario no podrá tokenizarlo porque el NIV ya está registrado.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">¿Puedo tokenizar una motocicleta o un camión?</button>
+      <div class="faq-answer">Sí. Cualquier vehículo con NIV de 17 dígitos, modelo 1985 en adelante.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">¿Cuánto dura el NFT?</button>
+      <div class="faq-answer">Para siempre, mientras la blockchain exista. No expira, no hay renovaciones.</div>
+    </div>
+  </div>
+  
+  <style>
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--gris-claro);
+      margin-bottom: 0.5rem;
+    }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 1rem 0;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--gris-oscuro);
+    }
+    .faq-question::after {
+      content: '+';
+      font-size: 1.5rem;
+    }
+    .faq-question.active::after {
+      content: '-';
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease;
+      padding: 0;
+      color: var(--gris-medio);
+    }
+    .faq-answer.active {
+      max-height: 300px;
+      padding-bottom: 1rem;
+    }
+  </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+          const answer = button.nextElementSibling;
+          if (answer) {
+            button.classList.toggle('active');
+            answer.classList.toggle('active');
+          }
+        });
+      });
+    });
+  </script>

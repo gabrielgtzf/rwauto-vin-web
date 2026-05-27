@@ -1,0 +1,17 @@
+---
+import LayoutBase from '@layouts/LayoutBase.astro';
+import FaqAccordion from '@components/FaqAccordion.astro';
+---
+
+<LayoutBase>
+  <div class="container" style="padding: 3rem 0;">
+    <h1 class="section-title">Preguntas frecuentes</h1>
+    <p style="text-align: center;">Resolvemos tus dudas sobre la tokenización con RWAuto.</p>
+    
+    <FaqAccordion />
+    
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="/contacto" class="btn-primary">¿No encontraste tu pregunta? Contáctanos</a>
+    </div>
+  </div>
+</LayoutBase>

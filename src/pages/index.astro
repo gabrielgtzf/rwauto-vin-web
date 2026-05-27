@@ -1,0 +1,35 @@
+---
+import LayoutBase from '@layouts/LayoutBase.astro';
+import Hero from '@components/Hero.astro';
+import Beneficios from '@components/Beneficios.astro';
+import ComoFunciona from '@components/ComoFunciona.astro';
+import Precios from '@components/Precios.astro';
+import FormularioCaptacion from '@components/FormularioCaptacion.astro';
+import VideoExplicativo from '@components/VideoExplicativo.astro';
+// Eliminada: import FaqAccordion ...
+---
+
+<LayoutBase>
+  <Hero />
+  <!-- Bloque de confianza -->
+  <div class="container" style="text-align: center; margin: -2rem auto 2rem;">
+    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+      <span style="background: #e2e8f0; padding: 0.25rem 1rem; border-radius: 1rem;">CNBV</span>
+      <span style="background: #e2e8f0; padding: 0.25rem 1rem; border-radius: 1rem;">Blockchain inmutable</span>
+      <span style="background: #e2e8f0; padding: 0.25rem 1rem; border-radius: 1rem;">Validación biométrica</span>
+    </div>
+    <p style="margin-top: 0.5rem; font-size: 0.875rem;">Tecnología regulada y segura. Tus datos, protegidos.</p>
+  </div>
+  <Beneficios />
+  <ComoFunciona />
+  <Precios />
+  
+  <!-- Pregunta destacada (FAQ reducido) -->
+  <div class="container" style="text-align: center; margin: 3rem auto;">
+    <h3>¿Necesito vender mi auto para tokenizarlo?</h3>
+    <p style="max-width: 700px; margin: 1rem auto; color: var(--gris-medio);">No. La tokenización es independiente. Usted conserva su vehículo y su NFT. Es como obtener un acta de nacimiento digital para su auto, sin obligación de venderlo ni comprarlo.</p>
+  </div>
+  
+  <VideoExplicativo />
+  <FormularioCaptacion />
+</LayoutBase>

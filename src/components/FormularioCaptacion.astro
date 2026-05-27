@@ -1,0 +1,56 @@
+---
+// Este formulario usa Netlify Forms. Al desplegar, Netlify lo detectará automáticamente.
+// Las notificaciones se enviarán al correo que usted configure en el panel de Netlify (contacto@rwauto.vin)
+---
+
+<div class="form-captacion" id="formulario-captacion">
+    <h3>Descarga gratis el Manual para proteger tu auto</h3>
+    <p>Aprende paso a paso cómo la tokenización blinda tu patrimonio.</p>
+    <form data-netlify="true" name="lead-captacion" method="POST" action="/?success=true">
+      <input type="hidden" name="form-name" value="lead-captacion" />
+      
+      <div class="form-group">
+        <label>Nombre completo *</label>
+        <input type="text" name="nombre" required />
+      </div>
+      <div class="form-group">
+        <label>Correo electrónico *</label>
+        <input type="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label>Teléfono (celular) *</label>
+        <input type="tel" name="telefono" required />
+      </div>
+      <div class="form-group">
+        <label>Marca y modelo del vehículo (opcional)</label>
+        <input type="text" name="vehiculo" />
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" name="privacidad" required />
+        <label>Acepto la política de privacidad y el tratamiento de mis datos.</label>
+      </div>
+      <button type="submit" class="btn-primary">Recibir guía gratuita</button>
+    </form>
+    <p class="privacy-note">No compartimos tus datos. Consulta nuestra política de privacidad.</p>
+  </div>
+  
+  <style>
+    .form-captacion {
+      background: var(--blanco);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: var(--sombra);
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    .form-captacion h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .privacy-note {
+      font-size: 0.75rem;
+      margin-top: 1rem;
+      text-align: center;
+      color: var(--gris-medio);
+    }
+  </style>

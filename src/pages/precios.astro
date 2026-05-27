@@ -1,0 +1,37 @@
+---
+import LayoutBase from '@layouts/LayoutBase.astro';
+---
+
+<LayoutBase>
+  <div class="container" style="padding: 3rem 0;">
+    <h1 class="section-title">Precios claros, sin sorpresas</h1>
+    <div class="precios-table" style="max-width: 600px; margin: 2rem auto;">
+      <table>
+        <thead><tr><th>Concepto</th><th>Precio</th></tr></thead>
+        <tbody>
+          <tr><td>Tokenización inicial (NFT de tu vehículo)</td><td><strong>$100 MXN</strong> (único pago)</td></tr>
+          <tr><td>Actualización del NFT</td><td><strong>$50 MXN</strong> por evento</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="max-width: 700px; margin: 0 auto;">
+      <h3>Notas importantes:</h3>
+      <ul>
+        <li>No hay cuotas mensuales ni anuales.</li>
+        <li>No cobramos comisiones por venta (RWAuto no vende ni compra vehículos; solo tokeniza).</li>
+        <li>El precio incluye verificación del NIV, almacenamiento de fotos y documentos, y acuñación en blockchain.</li>
+        <li>Aceptamos pago con tarjeta de crédito/débito a través de PayPal.</li>
+        <li>Si tienes un código de regalo, puedes usarlo para tokenizar sin costo.</li>
+      </ul>
+      
+      <h3>Preguntas frecuentes sobre precios:</h3>
+      <p><strong>¿Puedo tokenizar varios vehículos?</strong> Sí. Cada vehículo requiere su propio NFT y pago de $100 MXN.</p>
+      <p><strong>¿Qué pasa si cometo un error al cargar los datos?</strong> Puedes actualizar el NFT pagando solo $50 MXN por cada corrección.</p>
+      <p><strong>¿Hay reembolsos?</strong> Si el NIV es rechazado porque el vehículo no es válido o ya está tokenizado por otro usuario, contacta a soporte; evaluamos cada caso.</p>
+      
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="/#formulario-captacion" class="btn-primary">Tokenizar ahora</a>
+      </div>
+    </div>
+  </div>
+</LayoutBase>

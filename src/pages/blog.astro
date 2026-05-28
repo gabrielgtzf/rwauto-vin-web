@@ -58,7 +58,7 @@ const articulos = [
     <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--blanco); border-radius: 1rem;">
       <h3>Recibe nuevos artículos</h3>
       <p>Suscríbete para no perderte nuestras guías de tokenización.</p>
-      <form data-netlify="true" name="newsletter" method="POST" style="max-width: 400px; margin: 0 auto;" action="/gracias">
+      <form netlify name="newsletter" method="POST" style="max-width: 400px; margin: 0 auto;" action="/gracias">
         <input type="hidden" name="form-name" value="newsletter" />
         <div style="display: flex; gap: 0.5rem;">
           <input type="email" name="email" placeholder="Tu correo electrónico" required style="flex: 1;" />

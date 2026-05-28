@@ -1,5 +1,5 @@
 ---
-import { COLORS } from '../config';
+// No se requieren imports adicionales
 ---
 
 <section class="hero">
@@ -9,12 +9,8 @@ import { COLORS } from '../config';
       <p class="hero__subtitle">Protege tu patrimonio con blockchain. Sin vender, sin complicaciones.</p>
       <a href="#formulario-captacion" class="btn-primary hero__cta">Tokenizar ahora</a>
     </div>
-    <!-- Ilustración de fondo o lateral (placeholder) -->
     <div class="hero__image">
-      <div class="hero__placeholder" style="background-color: #e2e8f0; border-radius: 1rem; padding: 2rem; text-align: center; color: #64748b;">
-        <i class="fas fa-car" style="font-size: 4rem;"></i>
-        <p>Ilustración: vehículo con cadena blockchain</p>
-      </div>
+      <img src="/assets/hero-blockchain-car.png" alt="Vehículo con cadena de bloques" width="500" height="500" loading="eager" />
     </div>
   </div>
 </section>
@@ -42,6 +38,13 @@ import { COLORS } from '../config';
     color: var(--gris-medio);
     margin-bottom: 2rem;
   }
+  .hero__image img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
   @media (max-width: 768px) {
     .hero .container {
       grid-template-columns: 1fr;
@@ -49,6 +52,9 @@ import { COLORS } from '../config';
     }
     .hero__title {
       font-size: 2rem;
+    }
+    .hero__image {
+      order: -1; /* Mueve la imagen arriba en móviles */
     }
   }
 </style>

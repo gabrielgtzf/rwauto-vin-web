@@ -1,0 +1,69 @@
+---
+import LayoutBase from '@layouts/LayoutBase.astro';
+import ArticuloBase from '@components/ArticuloBase.astro';
+---
+
+<LayoutBase>
+  <ArticuloBase 
+    title="¿Qué es un NFT y cómo aplica a mi auto?"
+    date="15 de enero, 2025"
+    category="Tokenización"
+  >
+    <img src="/assets/blog/Blog_Articulo_1.png" alt="NFT y automóvil" style="width: 100%; border-radius: 0.75rem; margin: 1rem 0;" />
+    
+    <h2>Introducción</h2>
+    <p>Si has escuchado hablar de los NFT (Tokens No Fungibles) pero siempre los asociaste con arte digital o memes, prepárate para una sorpresa. La misma tecnología que permite vender una ilustración por millones de pesos también puede proteger el activo más valioso que muchas personas tienen después de su casa: <strong>su vehículo</strong>.</p>
+    <p>En RWAuto usamos NFT para tokenizar autos, camionetas, motocicletas y cualquier vehículo con Número de Identificación Vehicular (NIV). Pero, ¿qué significa esto en términos simples?</p>
+    
+    <h2>¿Qué es un NFT?</h2>
+    <p>Un NFT es un certificado digital de autenticidad único e irrepetible que vive en una blockchain (una cadena de bloques). A diferencia de una criptomoneda como Bitcoin o el peso digital, los NFT no son intercambiables uno por uno porque cada uno tiene características distintas.</p>
+    <p>Piénsalo así: dos billetes de $100 pesos valen exactamente lo mismo y son intercambiables. En cambio, dos boletos para un concierto no valen lo mismo si uno es para primera fila y otro para la última fila. Los NFT son como los boletos: únicos.</p>
+    
+    <h2>¿Cómo se aplica un NFT a un auto?</h2>
+    <p>Cuando tokenizas tu vehículo en RWAuto, ocurre lo siguiente:</p>
+    <ol>
+      <li>Se verifica tu identidad (KYC biométrico)</li>
+      <li>Se valida el NIV (número de serie de 17 dígitos) ante una base de datos oficial</li>
+      <li>Se toman fotografías del auto y se suben documentos</li>
+      <li>Se genera un NFT que <strong>se ata digitalmente</strong> a ese NIV y a tu identidad</li>
+    </ol>
+    <p>Ese NFT no es una imagen de tu auto (aunque puede incluirla). Es más bien un <strong>registro inmutable</strong> en blockchain que dice: "El vehículo con NIV X pertenece a la persona validada Y, y su historial es este".</p>
+    
+    <h2>¿Qué información guarda el NFT del auto?</h2>
+    <ul>
+      <li>Número de Identificación Vehicular (NIV)</li>
+      <li>Marca, línea, año, versión, color</li>
+      <li>Kilometraje declarado (actualizable)</li>
+      <li>Declaraciones del estado físico (motor, carrocería, interiores, llantas, suspensión)</li>
+      <li>Referencia a las fotografías públicas del vehículo (almacenadas en IPFS)</li>
+      <li>Hash de los documentos privados (sin revelar su contenido, pero demostrando que existen)</li>
+      <li>Fecha y hora de cada actualización</li>
+    </ul>
+    
+    <h2>Beneficios de tener un NFT para tu auto</h2>
+    <ul>
+      <li><strong>Prueba de propiedad inobjetable:</strong> La blockchain no miente. Si hay una disputa, tú puedes demostrar que eres el dueño legítimo desde la fecha de tokenización.</li>
+      <li><strong>Historial inmutable:</strong> Si actualizas el kilometraje o reparas algo, queda registrado para siempre. Un comprador futuro confiará más.</li>
+      <li><strong>Protección contra clonación:</strong> Si alguien intenta vender un vehículo con papeles falsos, tu NFT sirve como evidencia de la propiedad real.</li>
+      <li><strong>Sin necesidad de vender:</strong> Tokenizar no te obliga a vender. Es como obtener un acta de nacimiento digital para tu auto, sin compromisos comerciales.</li>
+    </ul>
+    
+    <h2>¿Es complicado obtener un NFT?</h2>
+    <p>No. En RWAuto hemos simplificado todo el proceso técnico. Tú solo necesitas:</p>
+    <ul>
+      <li>Crear una cuenta</li>
+      <li>Validar tu identidad (como cuando abres una cuenta bancaria)</li>
+      <li>Ingresar el NIV de tu auto</li>
+      <li>Subir fotos y documentos (los mismos que ya tienes en tu carpeta)</li>
+      <li>Pagar $100 MXN (una sola vez)</li>
+    </ul>
+    <p>Nosotros nos encargamos de acuñar el NFT en la blockchain y de guardar tus datos de forma segura.</p>
+    
+    <h2>Conclusión</h2>
+    <p>Un NFT vehicular es mucho más que una moda tecnológica. Es una herramienta práctica, económica y respaldada por la CNBV que te da <strong>tranquilidad y valor</strong> a tu patrimonio. Tokenizar tu auto hoy es como ponerle un seguro digital contra el fraude.</p>
+    
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="/#formulario-captacion" class="btn-primary">Tokenizar ahora</a>
+    </div>
+  </ArticuloBase>
+</LayoutBase>

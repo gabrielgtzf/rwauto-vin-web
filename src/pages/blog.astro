@@ -1,33 +1,38 @@
 ---
 import LayoutBase from '@layouts/LayoutBase.astro';
+
 const articulos = [
   {
     titulo: "¿Qué es un NFT y cómo aplica a mi auto?",
     fecha: "15 de enero, 2025",
     categoria: "Tokenización",
     extracto: "Explicación sencilla de tokens no fungibles y su uso en vehículos.",
-    slug: "que-es-nft-auto"
+    slug: "que-es-nft-auto",
+    imagen: "/assets/blog/Blog_Articulo_1.png"
   },
   {
     titulo: "5 señales de que tu auto puede ser víctima de clonación",
     fecha: "10 de enero, 2025",
     categoria: "Seguridad",
     extracto: "Cómo detectar si alguien duplicó tu NIV y cómo la tokenización te protege.",
-    slug: "senales-clonacion-auto"
+    slug: "senales-clonacion-auto",
+    imagen: "/assets/blog/Blog_Articulo_2.png"
   },
   {
     titulo: "Paso a paso: Cómo validar tu identidad en RWAuto",
     fecha: "5 de enero, 2025",
     categoria: "Proceso",
     extracto: "Guía visual del KYC biométrico.",
-    slug: "validar-identidad-rwauto"
+    slug: "validar-identidad-rwauto",
+    imagen: "/assets/blog/Blog_Articulo_3.png"
   },
   {
     titulo: "Blockchain y CNBV: por qué RWAuto es seguro y regulado",
     fecha: "1 de enero, 2025",
     categoria: "Confianza",
     extracto: "Explicación de la regulación y la tecnología inmutable.",
-    slug: "blockchain-cnbv-seguro"
+    slug: "blockchain-cnbv-seguro",
+    imagen: "/assets/blog/Blog_Articulo_4.png"
   }
 ];
 ---
@@ -41,7 +46,7 @@ const articulos = [
       {articulos.map(art => (
         <div class="blog-card">
           <div class="blog-card__image">
-            <div style="background-color: #cbd5e1; height: 160px; display: flex; align-items: center; justify-content: center;">Imagen destacada</div>
+            <img src={art.imagen} alt={art.titulo} style="width: 100%; height: 160px; object-fit: cover;" />
           </div>
           <div class="blog-card__content">
             <span class="blog-card__categoria">{art.categoria}</span>
@@ -58,7 +63,7 @@ const articulos = [
     <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--blanco); border-radius: 1rem;">
       <h3>Recibe nuevos artículos</h3>
       <p>Suscríbete para no perderte nuestras guías de tokenización.</p>
-      <form netlify name="newsletter" method="POST" style="max-width: 400px; margin: 0 auto;" action="/gracias">
+      <form netlify name="newsletter" method="POST" style="max-width: 400px; margin: 0 auto;">
         <input type="hidden" name="form-name" value="newsletter" />
         <div style="display: flex; gap: 0.5rem;">
           <input type="email" name="email" placeholder="Tu correo electrónico" required style="flex: 1;" />
@@ -81,6 +86,9 @@ const articulos = [
     border-radius: 0.75rem;
     overflow: hidden;
     box-shadow: var(--sombra);
+  }
+  .blog-card__image img {
+    display: block;
   }
   .blog-card__content {
     padding: 1rem;

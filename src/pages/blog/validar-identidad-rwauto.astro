@@ -1,0 +1,55 @@
+---
+import LayoutBase from '@layouts/LayoutBase.astro';
+import ArticuloBase from '@components/ArticuloBase.astro';
+---
+
+<LayoutBase>
+  <ArticuloBase 
+    title="Paso a paso: Cómo validar tu identidad en RWAuto"
+    date="5 de enero, 2025"
+    category="Proceso"
+  >
+    <img src="/assets/blog/Blog_Articulo_3.png" alt="Validación de identidad" style="width: 100%; border-radius: 0.75rem; margin: 1rem 0;" />
+    
+    <h2>Introducción</h2>
+    <p>Para tokenizar tu vehículo, el primer requisito es demostrar quién eres. Esto no es un capricho: es una obligación legal para prevenir el lavado de dinero y el fraude. Además, <strong>te protege a ti</strong>: si alguien intenta robar tu identidad para falsificar papeles de tu auto, la blockchain tendrá tu biometría como prueba irrefutable.</p>
+    <p>En RWAuto usamos el servicio de <strong>Persona Identities Inc.</strong>, la misma empresa que utilizan miles de compañías globales. Tus datos biométricos se comparan con tu identificación oficial, y el resultado se registra en blockchain (sin almacenar tus datos personales en la red pública).</p>
+    <p>El proceso es rápido, seguro y solo lo haces una vez. Aquí te explicamos cada paso.</p>
+    
+    <h3>Paso 1 – Ingresa a tu perfil</h3>
+    <ul>
+      <li>Inicia sesión en RWAuto con tu correo y contraseña.</li>
+      <li>Ve al menú <strong>"Mi cuenta" > "Mi perfil"</strong>.</li>
+      <li>Busca el botón <strong>"Validar mi identidad"</strong>.</li>
+    </ul>
+    
+    <h3>Paso 2 – Lee los avisos legales</h3>
+    <p>Serás redirigido a la interfaz de Persona Identities Inc. Acepta los términos y continúa.</p>
+    
+    <h3>Paso 3 – Selecciona tu país y tipo de identificación</h3>
+    <p>País: México. Tipo: INE / Credencial para votar <strong>o</strong> Pasaporte mexicano (recomendamos INE).</p>
+    
+    <h3>Paso 4 – Captura tu identificación</h3>
+    <p>Puedes tomar foto en vivo o subir una imagen. Requisitos: buena iluminación, sin dedos cubriendo, todos los bordes visibles.</p>
+    
+    <h3>Paso 5 – Realiza el video de reconocimiento facial</h3>
+    <p>El sistema te pedirá grabar un video breve (10 segundos): mira a la cámara, gira 45° izquierda, regresa al centro, gira 45° derecha. Sin gafas de sol, sin cubrebocas.</p>
+    
+    <h3>Paso 6 – Espera la verificación</h3>
+    <p>El proceso automático dura entre 10 y 30 segundos. Si es exitosa, verás un mensaje verde. Si falla, puedes reintentar hasta 3 veces.</p>
+    
+    <h3>Paso 7 – Confirma en RWAuto</h3>
+    <p>En tu perfil aparecerá "Identidad validada ✅". A partir de este momento, puedes tokenizar todos los vehículos que quieras.</p>
+    
+    <h2>¿Qué pasa con mis datos biométricos?</h2>
+    <ul>
+      <li>Persona Identities Inc. los almacena cifrados bajo contrato de confidencialidad.</li>
+      <li>En la blockchain no se guarda tu foto ni video, solo un hash criptográfico.</li>
+      <li>Tus datos no se venden ni comparten sin tu consentimiento.</li>
+    </ul>
+    
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="/#formulario-captacion" class="btn-primary">Comenzar validación</a>
+    </div>
+  </ArticuloBase>
+</LayoutBase>
